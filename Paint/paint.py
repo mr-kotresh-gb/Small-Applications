@@ -62,7 +62,6 @@ def save_as_png():
         pass
     else:
         result = result + '.png'
-
     if result:
         x=root.winfo_rootx()+my_canvas.winfo_x()
         y=root.winfo_rooty()+my_canvas.winfo_y()
@@ -72,16 +71,12 @@ def save_as_png():
         #Pop th message box
         messagebox.showinfo("Image saved", "Your Image has been saved")
 
-
 # Create our canvas
 w = 600
 h = 400
 
 my_canvas = Canvas(root, width=w, height=h, bg="white")
 my_canvas.pack(pady=20)
-
-# my_canvas.create_line(0, 100, 300, 100, fill="red")
-# my_canvas.create_line(150, 0, 150, 200, fill="red")
 
 my_canvas.bind('<B1-Motion>', paint)
 
