@@ -3,9 +3,7 @@ import time
 import datetime
 from tkinter import ttk
 
-
 msg1 = "Hello! Welcome to our hotel..."
-
 text1 = ""
 n = 0
 
@@ -245,7 +243,7 @@ def Exit():
     Display.insert(0, 'Thanks for patronage...')
     Display.after(3000, stop)
 
-
+# =======================Time=================================
 def tick():
     d = datetime.datetime.now()
     today = '{:%B %d, %Y}'.format(d)
@@ -279,7 +277,7 @@ root = Tk()
 root.geometry('1600x800+0+0')
 root.title("Hotel Management System")
 
-# ======================Window's Partition======================
+# ====================== Window's Partition ======================
 Tops = Frame(root, width=1600, height=100, bg='black', relief=SUNKEN)
 Tops.pack(side=TOP)
 
@@ -499,7 +497,5 @@ scroll_text = StringVar()
 txtscroll = Entry(f2, textvariable=scroll_text, font=('arial', 14, 'bold'), fg='white', bd=10, bg='black', width=32)
 txtscroll.grid(row=0, column=0, columnspan=4)
 display()
-
-
 
 root.mainloop()
